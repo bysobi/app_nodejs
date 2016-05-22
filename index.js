@@ -1,20 +1,18 @@
 var express = require('express');
 var app = express();
-
+app.set('title', 'My Site');
+app.get('title');
 app.get('/', function (req, res) {
-	res.send('Home21112!');
-});
+  res.send('Home page');
 
-app.get('/home', function (req, res) {
-  res.send('Home!');
 });
 
 app.get('/category', function (req, res) {
-  res.send('category!');
+  res.send('Category page');
 });
 
 app.get('/product', function (req, res) {
-  res.send('product!');
+  res.send('Product page');
 });
 
 app.listen(3000, function () {
