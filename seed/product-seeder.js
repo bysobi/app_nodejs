@@ -21,8 +21,8 @@ var products = [
 		title: 'Blog module',
 		description: 'The Blog module your have all been waiting for. Feature rich, native opencart blog engine that was specifically developed to seamlessly integrate into your site.',
 		price: 25,
-		image: ''
-	}),
+		image: 'http://image.opencart.com/extension/572a57b9c2396-resize-693x200.jpg'
+	})
 ];
 
 var done = 0;

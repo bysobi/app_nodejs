@@ -1,8 +1,17 @@
 var express = require('express');
 var router = express.Router();
+var Product = require('../models/product');
 
 router.get('/', function(req, res, next) {
-  res.render('home', { title: 'Home page' });
+	products = Product.find(function(err, docs) {
+		var productChunks = [];
+		var chunkSize = 3;
+		for (var i = 0; i < docs.length; i += chunkSize) {
+			productChunks.push(docs.slice(i, i + chunkSize));
+		}
+		res.render('home', { title: 'Home page', products: docs });
+	});
+	
 });
 
 router.get('/category', function (req, res, next) {
