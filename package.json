@@ -2,9 +2,9 @@
   "name": "nodejs",
   "version": "1.0.0",
   "description": "shop",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -13,9 +13,11 @@
   "author": "Pavel",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^3.3.6",
     "express": "^4.13.4",
     "express3-handlebars": "^0.5.2",
     "mongodb": "^2.1.19",
+    "mongoose": "^4.4.19",
     "nodemon": "^1.9.2"
   },
   "devDependencies": {}
